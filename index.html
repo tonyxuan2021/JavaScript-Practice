@@ -1675,6 +1675,13 @@
         /* justify-content: center;
         align-items: center; */
       }
+
+      @media only screen and (min-width: 768px) {
+        .value-wrapper {
+          flex-direction: row;
+        }
+      }
+
       .value-inner {
         display: flex;
         flex-direction: column;
@@ -1686,6 +1693,10 @@
 
       .value-header {
         margin-bottom: 2rem;
+      }
+
+      .value-text-header {
+        text-align: center;
       }
     </style>
     <script
@@ -2072,7 +2083,10 @@
             </div>
             <!-- assessment 3 - section -->
             <div class="value">
-              <h2 class="value-header" style="text-align: center; font-weight: bold">
+              <h2
+                class="value-header"
+                style="text-align: center; font-weight: bold"
+              >
                 Value Propositions
               </h2>
               <div class="value-wrapper">
@@ -2082,8 +2096,10 @@
                     src="https://via.placeholder.com/200x150"
                     alt="200*150 pixel image"
                   />
-                  <h4 style="font-weight: bold">Header1</h4>
-                  <p>
+                  <div class="value-text">
+                    <h4 class="value-text-header" style="font-weight: bold">Header1</h4>
+                    <p>
+                  </div>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Culpa est perspiciatis magni placeat qui veniam repellat,
                     impedit mollitia! Similique, maxime!
@@ -2095,12 +2111,15 @@
                     src="https://via.placeholder.com/200x150"
                     alt="200*150 pixel image"
                   />
-                  <h4 style="font-weight: bold">Header2</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Maiores eaque aperiam facilis blanditiis architecto modi
-                    quos saepe ipsa nostrum sapiente?
-                  </p>
+                  <div class="value-text">
+                    <h4 class="value-text-header" style="font-weight: bold">Header2</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maiores eaque aperiam facilis blanditiis architecto modi
+                      quos saepe ipsa nostrum sapiente?
+                    </p>
+                  </div>
+
                 </div>
                 <div class="value-inner">
                   <img
@@ -2108,12 +2127,14 @@
                     src="https://via.placeholder.com/200x150"
                     alt="200*150 pixel image"
                   />
-                  <h4 style="font-weight: bold">Header3</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quaerat rerum facere soluta nihil dolores, asperiores libero
-                    in temporibus perspiciatis reprehenderit.
-                  </p>
+                  <div class="value-text">
+                    <h4 class="value-text-header" style="font-weight: bold">Header3</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quaerat rerum facere soluta nihil dolores, asperiores libero
+                      in temporibus perspiciatis reprehenderit.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
