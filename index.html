@@ -1658,6 +1658,36 @@
         margin-left: -5px;
       }
     </style>
+    <!-- styles test -->
+    <style>
+      .modal-active {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+    <style>
+      .value-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        /* justify-content: center;
+        align-items: center; */
+      }
+      .value-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .value-img {
+        margin-bottom: 2rem;
+      }
+
+      .value-header {
+        margin-bottom: 2rem;
+      }
+    </style>
     <script
       async=""
       defer=""
@@ -2037,6 +2067,53 @@
                       <p></p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <!-- assessment 3 - section -->
+            <div class="value">
+              <h2 class="value-header" style="text-align: center; font-weight: bold">
+                Value Propositions
+              </h2>
+              <div class="value-wrapper">
+                <div class="value-inner">
+                  <img
+                    class="value-img"
+                    src="https://via.placeholder.com/200x150"
+                    alt="200*150 pixel image"
+                  />
+                  <h4 style="font-weight: bold">Header1</h4>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Culpa est perspiciatis magni placeat qui veniam repellat,
+                    impedit mollitia! Similique, maxime!
+                  </p>
+                </div>
+                <div class="value-inner">
+                  <img
+                    class="value-img"
+                    src="https://via.placeholder.com/200x150"
+                    alt="200*150 pixel image"
+                  />
+                  <h4 style="font-weight: bold">Header2</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores eaque aperiam facilis blanditiis architecto modi
+                    quos saepe ipsa nostrum sapiente?
+                  </p>
+                </div>
+                <div class="value-inner">
+                  <img
+                    class="value-img"
+                    src="https://via.placeholder.com/200x150"
+                    alt="200*150 pixel image"
+                  />
+                  <h4 style="font-weight: bold">Header3</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat rerum facere soluta nihil dolores, asperiores libero
+                    in temporibus perspiciatis reprehenderit.
+                  </p>
                 </div>
               </div>
             </div>
@@ -2872,6 +2949,7 @@
                             >
                           </p>
                           <button
+                            class="modal-btn"
                             style="
                               background-color: #f79120;
                               color: #fff;
@@ -3864,6 +3942,13 @@
     <script>
       !(function () {
         // console.log("josh");
+        let modalBtn = document.querySelector(".modal-btn");
+        let modalBg = document.querySelector(".modal-bg");
+
+        modalBtn.addEventListener("click", () => {
+          modalBg.classList.add("modal-active");
+          // console.log("josh");
+        });
       })();
     </script>
     <noscript
