@@ -1658,12 +1658,27 @@
         margin-left: -5px;
       }
     </style>
-    <!-- styles test -->
+    <!-- styles assessment -->
     <style>
+      .modal-bg {
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      }
+
       .modal-active {
         visibility: visible;
         opacity: 1;
       }
+
     </style>
     <style>
       .value-wrapper {
@@ -2985,19 +3000,7 @@
                       </div>
                       <div
                         class="modal-bg"
-                        style="
-                          width: 100%;
-                          height: 100vh;
-                          background: rgba(0, 0, 0, 0.5);
-                          position: fixed;
-                          top: 0;
-                          left: 0;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;
-                          visibility: hidden;
-                          opacity: 0;
-                        "
+                      
                       >
                         <div
                           class="modal"
@@ -3020,6 +3023,7 @@
                             magnam maiores possimus quo perferendis.
                           </div>
                           <span
+                          class="modal-close"
                             style="
                               position: absolute;
                               right: 20px;
@@ -3962,14 +3966,16 @@
     </script>
     <script>
       !(function () {
-        // console.log("josh");
         let modalBtn = document.querySelector(".modal-btn");
         let modalBg = document.querySelector(".modal-bg");
+        let modalClose = document.querySelector(".modal-close")
 
         modalBtn.addEventListener("click", () => {
           modalBg.classList.add("modal-active");
-          // console.log("josh");
         });
+        modalClose.addEventListener("click", ()=> {
+          modalBg.classList.remove("modal-active");
+        })
       })();
     </script>
     <noscript
