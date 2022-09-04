@@ -1742,6 +1742,33 @@
       .tab.active {
         background-color: #f7f7f7;
       }
+
+      .content1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        margin: 2rem 2rem;
+        padding: 2rem 10rem;
+        border-radius: 4px;
+      }
+
+      .content2 {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        margin: 2rem 18rem;
+        padding: 2rem 2rem;
+        border-radius: 4px;
+      }
+
+      .content {
+        display: none;
+      }
+
+      .content.active {
+        display: flex;
+      }
     </style>
   </head>
   <body class="page-template-default page page-id-366 unknown">
@@ -2168,18 +2195,7 @@
                   <button class="tab">Tab2</button>
                 </div>
                 <div class="contents" style="background-color: #f7f7f7">
-                  <div
-                    class="content"
-                    style="
-                      display: flex;
-                      justify-content: space-between;
-                      align-items: center;
-                      background-color: white;
-                      margin: 2rem 2rem;
-                      padding: 2rem 10rem;
-                      border-radius: 4px;
-                    "
-                  >
+                  <div class="content content1 active">
                     <div
                       class="content--left"
                       style="
@@ -2203,17 +2219,7 @@
                       <img src="https://via.placeholder.com/300x150" alt="" />
                     </div>
                   </div>
-                  <div
-                    class="content"
-                    style="
-                      display: flex;
-                      justify-content: space-between;
-                      background-color: white;
-                      margin: 2rem 18rem;
-                      padding: 2rem 2rem;
-                      border-radius: 4px;
-                    "
-                  >
+                  <div class="content content2">
                     <div
                       class="content--left"
                       style="
@@ -3941,13 +3947,18 @@
     <script>
       !(function () {
         const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".content");
 
-        tabs.forEach((tab) => {
+        tabs.forEach((tab, index) => {
           tab.addEventListener("click", () => {
             // remove active class from prev tab
             tabs.forEach((tab) => tab.classList.remove("active"));
             // add active class to current tab
             tab.classList.add("active");
+
+            contents.forEach((content) => content.classList.remove("active"));
+
+            contents[index].classList.add("active");
           });
         });
       })();
