@@ -2186,7 +2186,7 @@
                   </div>
                 </div>
               </section>
-              <!-- assessment area -->
+              <!-- assessment 4. Tabbable Section -->
               <section
                 style="
                   display: flex;
@@ -2231,7 +2231,12 @@
                         doloribus! Distinctio quisquam maiores quibusdam sequi!
                       </p>
                       <div
-                        style="display: flex; align-items: center; gap: 1rem"
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 1rem;
+                          cursor: pointer;
+                        "
                       >
                         <p style="font-weight: bold">Chat with us</p>
                         <i class="fa-solid fa-arrow-right"></i>
@@ -2259,7 +2264,11 @@
                         <h2 style="font-weight: bold">Header</h2>
                       </div>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, provident ab repudiandae quo saepe quam odit iure aperiam earum consequuntur similique quibusdam blanditiis voluptatum totam, harum soluta quis sapiente sequi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Explicabo, provident ab repudiandae quo saepe quam odit
+                        iure aperiam earum consequuntur similique quibusdam
+                        blanditiis voluptatum totam, harum soluta quis sapiente
+                        sequi.
                       </p>
                     </div>
                     <div class="content--right">
@@ -2271,7 +2280,9 @@
                           background-color: white;
                         "
                       >
-                        <div style="display: flex; gap: 1rem; align-items: center;">
+                        <div
+                          style="display: flex; gap: 1rem; align-items: center"
+                        >
                           <p style="font-weight: bold">Try for free</p>
                           <i class="fa-solid fa-arrow-right"></i>
                         </div>
@@ -3983,7 +3994,11 @@
             // add active class to current tab
             tab.classList.add("active");
 
+            // remove active clas from prev content
+
             contents.forEach((content) => content.classList.remove("active"));
+
+            // add active class to current content
 
             contents[index].classList.add("active");
           });
