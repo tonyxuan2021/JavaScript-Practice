@@ -1711,7 +1711,33 @@
       async=""
       src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/701992438/?random=1662268255451&amp;cv=9&amp;fst=1662268255451&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=900&amp;u_w=1440&amp;u_ah=875&amp;u_aw=1440&amp;u_cd=30&amp;u_his=2&amp;u_tz=-420&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2oa8v0&amp;sendb=1&amp;ig=1&amp;data=event%3Dgtag.config&amp;frm=0&amp;url=https%3A%2F%2Fwww.widerfunnel.com%2Fculture%2F&amp;tiba=Learn%20more%20about%20our%20team%20culture%20-%20Widerfunnel&amp;auid=524860402.1662268250&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"
     ></script>
-    <style></style>
+
+    <!-- assessment styles -->
+    <style>
+      .tab {
+        background-color: white;
+        border: 1px solid grey;
+        width: 250px;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .tab::before {
+        content: "";
+        position: absolute;
+        background-color: #0693e3;
+        height: 8px;
+        top: 0;
+        left: 0;
+        width: 0;
+        /* transition: width 0.8s ease; */
+      }
+
+      .tab.active::before {
+        width: 100%;
+      }
+    </style>
   </head>
   <body class="page-template-default page page-id-366 unknown">
     <div
@@ -2125,7 +2151,54 @@
                 </div>
               </section>
               <!-- assessment area -->
-              <section>TABS SECTION</section>
+              <section
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <div class="tabs" style="display: flex; gap: 1rem">
+                  <button class="tab active">Tab1</button>
+                  <button class="tab">Tab2</button>
+                </div>
+                <div class="contents" style="background-color: #f7f7f7">
+                  <div
+                    class="content"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      background-color: white;
+                      margin: 2rem 2rem;
+                      padding: 2rem 10rem;
+                    "
+                  >
+                    <div
+                      class="content--left"
+                      style="
+                        width: 40%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                      "
+                    >
+                      <div style="border-bottom: 1px solid grey; width: 60%">
+                        <h4 style="font-weight: bold">Header</h4>
+                      </div>
+                      <p style="width: 80%">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Nemo ut cumque necessitatibus, explicabo nam
+                        doloribus! Distinctio quisquam maiores quibusdam sequi!
+                      </p>
+                      <p style="font-weight: bold">Chat with us</p>
+                    </div>
+                    <div class="content--right" style="width: 40%">
+                      <img src="https://via.placeholder.com/300x150" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </section>
               <section id="thebasics" class="careers-page-hero-title-links">
                 <div class="container">
                   <div class="row">
