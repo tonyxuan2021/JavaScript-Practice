@@ -1716,7 +1716,7 @@
     <style>
       .tab {
         background-color: white;
-        border: 1px solid grey;
+        border: 1px solid #f7f7f7;
         width: 250px;
         padding: 1rem 1.5rem;
         cursor: pointer;
@@ -1731,11 +1731,16 @@
         top: 0;
         left: 0;
         width: 0;
-        /* transition: width 0.8s ease; */
+        transition: width 0.5s;
       }
 
       .tab.active::before {
         width: 100%;
+        /* background-color: #f7f7f7; */
+      }
+
+      .tab.active {
+        background-color: #f7f7f7;
       }
     </style>
   </head>
@@ -2159,7 +2164,7 @@
                 "
               >
                 <div class="tabs" style="display: flex; gap: 1rem">
-                  <button class="tab active">Tab1</button>
+                  <button class="tab">Tab1</button>
                   <button class="tab">Tab2</button>
                 </div>
                 <div class="contents" style="background-color: #f7f7f7">
@@ -3887,6 +3892,24 @@
       qp("init", "9ec5d441c3804500aa97bee63a860cae");
       qp("track", "ViewContent");
     </script>
+
+    <!-- assessment script -->
+
+    <script>
+      !(function () {
+        const tabs = document.querySelectorAll(".tab");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            // remove active class from prev tab
+            tabs.forEach((tab) => tab.classList.remove("active"));
+            // add active class to current tab
+            tab.classList.add("active");
+          });
+        });
+      })();
+    </script>
+
     <noscript
       ><img
         height="1"
